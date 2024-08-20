@@ -1,16 +1,62 @@
 .pagination {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.pagination-input {
+  display: flex;
+  gap: 10px;
+}
+
+.input-pagenumber {
+  border: 1px solid rgb(206, 212, 218);
+  background-color: #ffffff;
+}
+
+.input-pagenumber:hover,
+.input-pagenumber:focus,
+.input-pagenumber:focus-visible {
+  border-color: #7952b3 !important;
+  outline: none;
+}
+
+.pagination-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+button {
+  padding: 4px;
+  border: 1px solid rgb(206, 212, 218);
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  border-color: #7952b3;
+}
+
+.per-page {
+  font-size: 14px;
+}
+
+select {
+  margin-right: 8px;
+}
+
+@media screen and (min-width: 200px ) and (max-width: 767px) {
+  .pagination {
+      display: block !important;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 15px;
   }
   
-  button {
-    padding: 8px;
-    border: 1px solid #ced4da;
-    background-color: #ffffff;
-    cursor: pointer;
+  .pagination-input {
+      margin-top: 10px;
   }
-  
-  select {
-    margin-right: 8px;
-  }
+}
