@@ -1,11 +1,13 @@
 import React from 'react';
 import './Table.css';
 
-function Table({ data, isLoading, error }) {
-  if (isLoading) return <div><span class="loader"></span></div>;
+function Table({ data, isLoading, error, flag }) {
+  
+  if (isLoading) return <div><span className="loader"></span></div>;
   if (error) return <div>Error loading data.</div>;
 
-  if (!data.length) return <div>No result found</div>;
+  if (flag && !data.length) return <div>No result found</div>;
+  if(!data.length) return <></>
 
   return (
     <>

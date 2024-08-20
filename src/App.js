@@ -11,14 +11,16 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(5);
+  const [itemsPerPage, setItemsPerPage] = useState(3);
   const [totalPages, setTotalPages] = useState(0);
+  const [flag, setFlag] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
       try {
         const response = await fetchCities(query, itemsPerPage);
+        setFlag(true)
         setData(response.data);
         setTotalPages(Math.ceil(response.metadata.totalCount / itemsPerPage));
       } catch (error) {
@@ -33,9 +35,9 @@ function App() {
   }, [query, itemsPerPage, currentPage]);
 
   return (
-    <div className="app">
+    <div>
       <SearchBox onSearch={setQuery} />
-      <Table data={data} isLoading={isLoading} error={error} />
+      <Table data={data} isLoading={isLoading} error={error} flag={flag} />
       {data.length > 0 && (
         <Pagination
           currentPage={currentPage}
