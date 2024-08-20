@@ -1,0 +1,20 @@
+.search-box {
+    width: 241px;
+    height: 38px;
+    font-size: 16px;
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 6px 12px;
+    box-sizing: border-box;
+  }
+  
+  .search-box:focus {
+    border-color: #7952b3;
+    box-shadow: 0 0 0 3px rgba(121, 82, 179, 0.25);
+    outline: none;
+  }
+  
+  .search-box:disabled {
+    background-color: #e9ecef;
+  }

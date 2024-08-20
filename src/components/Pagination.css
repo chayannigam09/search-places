@@ -1,0 +1,16 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  button {
+    padding: 8px;
+    border: 1px solid #ced4da;
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+  
+  select {
+    margin-right: 8px;
+  }
