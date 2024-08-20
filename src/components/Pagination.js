@@ -3,7 +3,7 @@ import './Pagination.css';
 
 function Pagination({ currentPage, totalPages, onPageChange, onItemsPerPageChange }) {
     const [error, setError] = useState('');
-    const [itemsPerPage, setItemsPerPage] = useState(3);
+    const [itemsPerPage, setItemsPerPage] = useState(5);
     const [debounceTimeout, setDebounceTimeout] = useState(null);
 
     const handleErr = (val) => {
@@ -49,7 +49,7 @@ function Pagination({ currentPage, totalPages, onPageChange, onItemsPerPageChang
                     type="number"
                     min="1"
                     max="10"
-                    defaultValue={3}
+                    defaultValue={5}
                     onChange={(e) => setItemsPerPage(Number(e.target.value))}
                     className='input-pagenumber'
                 />
